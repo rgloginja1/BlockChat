@@ -1,0 +1,23 @@
+{
+  "name": "BlockChat",
+  "description": "A Chat App with Built-in Blockchain Technology",
+  "website": "",
+  "repository": "",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "success_url": "/",
+  "keywords": [
+    "node",
+    "express",
+    "socket.io",
+    "realtime",
+    "websocket",
+    "js-sha256"
+  ],
+  "scripts": {
+  },
+  "addons": [
+  ],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+  }
+}
