@@ -1,2 +1,4 @@
 # BlockChat
-The BlockChat Repo
+The Official BlockChat Repository
+
+More info to come shortly!
