@@ -50,11 +50,13 @@
             <button class="btn btn-lobby btn-block btn-primary">Ethereum</button>
             <button class="btn btn-lobby btn-block btn-primary">Litecoin</button>
             <button class="btn btn-lobby btn-block btn-primary">Off Beat</button>
+            <button class="btn btn-block btn-success" data-toggle="modal" data-target="#modCreateNewChan">Create New Channel</button>
             
           </div>
         </div>
       </div>
       
+      <h5 class="text-center">Please donate ETH: 0x779ba9bb9a65970004c22d81ec66eca2a50e2d8d</h5>
     </div>
     
     <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -78,6 +80,28 @@
       
       </div>
     </nav>
+
+     <div class="modal fade" id="modCreateNewChan" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 style="color:black;"><span class=""></span>Create New Channel</h4>
+          </div>
+          <div class="modal-body">
+           <h3 class="text-center">Coming soon!</h3>
+          </div>
+          <div class="modal-footer">
+            
+            <p><small>&copy; 2018 RMG Software Pty Ltd</small></p>  
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -117,7 +141,7 @@
             $('#messages').prepend($('<li class="list-group-item" style="background-color: #f5f5f5;">').html('<strong>'+msg[3]+':</strong> '+msg[0] + '<br/><small><strong>Hash</strong>: ' + msg[2] + '</small>'));
             window.scrollTo(0, document.body.scrollHeight);
           } else {
-            $('#messages').prepend($('<li class="list-group-item">').html('<strong>'+msg[3]+':</strong> '+msg[0] + '<br/><small><strong>Hash</strong>: ' + msg[2] + '</small>'));
+            $('#messages').prepend($('<li class="list-group-item">').html('<strong onclick="updateChat(&#39;'+msg[3]+'&#39;);">'+msg[3]+':</strong> '+msg[0] + '<br/><small><strong>Hash</strong>: ' + msg[2] + '</small>'));
             window.scrollTo(0, document.body.scrollHeight);
           }
             
@@ -126,6 +150,10 @@
         });
 
       });
+
+      function updateChat(NameR){
+        $('#m').val('@' + NameR + ', ');
+      }
     </script>
 
    
